@@ -1,0 +1,16 @@
+código para compilar:
+riscv64-linux-gnu-gcc ola.c -o ola-riscv.x
+
+código para ler o cabeçalho em ELF de um arquivo executável:
+readelf -h ola-riscv
+
+
+código para gerar o código object:
+riscv64-linux-gnu-as -march rv32i -mabi ilp32 inc33.s -o inc33.o
+riscv64-linux-gnu-objdump -D inc33.o
+
+
+código para linkar:
+riscv64-linux-gnu-ld -m elf32lriscv inc33.o -o inc33.x
+
+Utiliza o site: https://riscv-programming.org/ale

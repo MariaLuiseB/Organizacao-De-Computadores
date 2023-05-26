@@ -1,0 +1,12 @@
+INP 
+STA X
+INP
+STA Y
+ADD X
+STA Y # Aarmazena a soma de x + y em y 
+INP  
+ADD Y # adiciona o inp no acumulador que tinha o valor da soma anterior 
+OUT
+HLT
+X DAT 
+Y DAT 
